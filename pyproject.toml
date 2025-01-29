@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "endstone-onlinetime"
+version = "0.0.1"
+dependencies = []
+authors = [
+    { name = "ljh938527", email = "2689819155@qq.com" }
+]
+description = "A plugin to show player online time for endstone."
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["endstone", "plugin", "onlinetime"]
+
+[project.urls]
+Homepage = "https://github.com/ljh938527/onlinetime-endstone"
+
+[project.entry-points."endstone"]
+onlinetime = "endstone_onlinetime:OnlineTime"
