@@ -4,7 +4,7 @@ A plugin to show player online time for endstone.
 
 ## Install
 
-- Download .whl file from [release](https://gitee.com/ljh938527/onlinetime-endstone/releases)
+- Download .whl file from [release](https://github.com/ljh938527/onlinetime-endstone/releases)
 - Put it into `plugins` folder
 - Restart the server, enjoy!
 
