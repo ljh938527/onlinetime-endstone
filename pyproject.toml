@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "endstone-onlinetime"
-version = "0.0.1"
+version = "0.0.2"
 dependencies = []
 authors = [
     { name = "ljh938527", email = "2689819155@qq.com" }
