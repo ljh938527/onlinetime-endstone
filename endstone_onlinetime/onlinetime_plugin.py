@@ -8,7 +8,7 @@ from endstone.command import Command, CommandSender
 from endstone.scoreboard import DisplaySlot, Criteria
 from endstone.plugin import Plugin
 
-version = '0.0.2'
+version = '0.0.3'
 
 class OnlineTime(Plugin):
     
@@ -23,18 +23,13 @@ class OnlineTime(Plugin):
         self.lang = self.load_language()
         self.top_list = []
         self.top = ""
-    
-    def on_load(self):
-        if not self.data_folder.exists():
-            self.data_folder.mkdir()
             
     def load_time_data(self):
         try:
             with open(self.time_data_file, "r") as f:
                 return json.load(f)
         except FileNotFoundError:
-            if not self.data_folder.exists():
-                self.data_folder.mkdir()
+            os.makedirs(os.path.dirname(self.time_data_file), exist_ok=True)
             with open(self.time_data_file, "w") as f:
                 json.dump({}, f)
             return {}
